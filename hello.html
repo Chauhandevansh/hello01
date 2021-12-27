@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>User Input</title>
+</head>
+<body>
+
+<input type="text" placeholder="" id="1">
+<button id="enter">Name</button><br>
+
+<div id="outputName">
+
+</div>
+<script>
+document.getElementById("enter").onclick = function(){
+	var name = document.getElementById('1').value
+    if(name){
+        var div = document.createElement("div")
+        div.innerHTML = name
+        document.getElementById('outputName').appendChild(div)
+        document.getElementById('1').value = ' '
+    }
+}
+
+
+</script>
+</body>
+</html>
